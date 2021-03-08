@@ -1,0 +1,16 @@
+body {
+  background: url("http://drive.google.com/uc?export=view&id=1Gp7cPwRcnh_4kpFPWlgW5_SrPg4SFjFl");
+  background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size: contain;
+}
+p {
+    font-size: 8.2vw;
+	font-size: 8.2vh;
+	color:#0f0;
+	font-weight: bold;
+	text-align:center;
+	font-family:calibri;
+	margin-top:2.6em;
+}
