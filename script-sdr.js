@@ -16,7 +16,7 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){
 }
 else if(countDownDate.getDay()==5 && countDownDate.getHours()==22){
 	countDownDate.setHours(22);
-	countDownDate.setMinutes(30);
+	countDownDate.setMinutes(37);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
