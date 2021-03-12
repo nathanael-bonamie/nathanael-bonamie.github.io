@@ -14,7 +14,7 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){
 }
 else if(countDownDate.getDay()==5 && countDownDate.getHours()==22){
 	countDownDate.setHours(22);
-	countDownDate.setMinutes(01);
+	countDownDate.setMinutes(08);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
@@ -25,9 +25,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   var audio = document.getElementById("cntq");
   
-  var paragraph = document.getElementById("message");
-  paragraph.textContent += minutes + "m " + seconds + "s ";
-  //document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+  document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + "m " + seconds + "s ";
     
   if (distance <= 5000) {//fermeture à 5 sec
     window.close();
