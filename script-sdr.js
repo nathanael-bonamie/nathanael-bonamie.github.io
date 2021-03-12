@@ -14,7 +14,7 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){
 }
 else if(countDownDate.getDay()==5 && countDownDate.getHours()==22){
 	countDownDate.setHours(22);
-	countDownDate.setMinutes(10);
+	countDownDate.setMinutes(30);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
@@ -32,7 +32,7 @@ var x = setInterval(function() {
   }
   else if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
 	audio.pause();
-	var bip = new Audio('c:/Users/Salle du Royaume/Downloads/goes.ogg');
+	var bip = new Audio('nathanael-bonamie.github.io/goes.ogg');
 	bip.play();
   }
   else if (distance <= 60000 && seconds == 15) {//fadeout à 15 sec
