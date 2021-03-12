@@ -12,10 +12,10 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
-else if(countDownDate.getDay()==5 && countDownDate.getHours()==21){
-	countDownDate.setHours(21);
-	countDownDate.setMinutes(36);
-	countDownDate.setSeconds(30);
+else if(countDownDate.getDay()==5 && countDownDate.getHours()==22){
+	countDownDate.setHours(22);
+	countDownDate.setMinutes(01);
+	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
 var x = setInterval(function() {
@@ -24,8 +24,10 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   var audio = document.getElementById("cntq");
-    
-  document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+  
+  var paragraph = document.getElementById("message");
+  paragraph.textContent += minutes + "m " + seconds + "s ";
+  //document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
     
   if (distance <= 5000) {//fermeture à 5 sec
     window.close();
