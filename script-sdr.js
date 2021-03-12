@@ -25,7 +25,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   var audio = document.getElementById("cntq");
   
-  document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + "m " + seconds + "s ";
+  document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + " mn " + seconds + " s ";
     
   if (distance <= 5000) {//fermeture à 5 sec
     window.close();
