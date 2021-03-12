@@ -1,5 +1,7 @@
 sessionStorage.setItem("play","no");
+var audio = document.getElementById("cntq");
 var countDownDate = new Date();
+
 if (countDownDate.getDay()==2 && countDownDate.getHours()==19){
 	countDownDate.setHours(19);
 	countDownDate.setMinutes(30);
@@ -23,7 +25,6 @@ var x = setInterval(function() {
   var distance = countDownDate - now;
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  var audio = document.getElementById("cntq");
   
   document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + " mn " + seconds + " s ";
     
