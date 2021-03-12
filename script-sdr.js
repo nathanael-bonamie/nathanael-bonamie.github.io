@@ -32,7 +32,7 @@ var x = setInterval(function() {
   }
   else if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
 	audio.pause();
-	var bip = new Audio('nathanael-bonamie.github.io/goes.ogg');
+	var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
 	bip.play();
   }
   else if (distance <= 60000 && seconds == 15) {//fadeout à 15 sec
