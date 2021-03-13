@@ -16,7 +16,7 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){
 }
 else if(countDownDate.getDay()==6 && countDownDate.getHours()==14){
 	countDownDate.setHours(14);
-	countDownDate.setMinutes(15);
+	countDownDate.setMinutes(18);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
@@ -27,8 +27,8 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
-  if (seconds < 10 ? document.getElementById("message").innerHTML = "La reunion commence dans " + minutes + " mn 0" + seconds + " s" 
-                   : document.getElementById("message").innerHTML = "La reunion commence dans " + minutes + " mn " + seconds + " s");
+  if (seconds < 10 ? document.getElementById("message").innerHTML = "La r&eacuteunion commence dans " + minutes + " mn 0" + seconds + " s" 
+                   : document.getElementById("message").innerHTML = "La r&eacuteunion commence dans " + minutes + " mn " + seconds + " s");
   
   //document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + " mn " + seconds + " s ";
     
@@ -54,6 +54,8 @@ function fadeOutEffect() {
     setInterval(function () {
 		var audio = document.getElementById("cntq");
 		audio.volume -= 0.01;
-	    	if(audio.volume == 0.05){audio.pause();}
+	    	if(audio.volume == 0.1){
+			audio.pause();
+		}
     }, 150);
 	}
