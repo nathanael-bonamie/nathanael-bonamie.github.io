@@ -16,7 +16,7 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){
 }
 else if(countDownDate.getDay()==6 && countDownDate.getHours()>19){
 	countDownDate.setHours(20);
-	countDownDate.setMinutes(02);
+	countDownDate.setMinutes(08);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
@@ -52,11 +52,11 @@ var x = setInterval(function() {
 	audio.play();
 	sessionStorage.setItem("play","yes");
   }
-}, 1000);
-  if (audio.volume < 0.1){
-  	clearInterval(y);
-	audio.pause();
-  }
-  if (distance < 0){
+  else if (distance < 0){
   	clearInterval(x);
   }
+  else if (audio.volume < 0.1){
+  	clearInterval(y);
+	audio.pause();
+  	}
+}, 1000);
