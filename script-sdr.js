@@ -16,7 +16,7 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){
 }
 else if(countDownDate.getDay()==6 && countDownDate.getHours()==19){
 	countDownDate.setHours(19);
-	countDownDate.setMinutes(40);
+	countDownDate.setMinutes(46);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
@@ -33,8 +33,8 @@ var x = setInterval(function() {
   //document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + " mn " + seconds + " s ";
     
   if (distance <= 5000) {//fermeture à 5 sec
-    window.open('', '_self', '');
-    window.close(); 
+    var customWindow = window.open('', '_blank', '');
+    customWindow.close(); 
   }
   else if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
 	audio.pause();
