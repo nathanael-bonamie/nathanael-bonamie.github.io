@@ -14,10 +14,10 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
-else if(countDownDate.getDay()==6 && countDownDate.getHours()==14){
-	countDownDate.setHours(14);
-	countDownDate.setMinutes(57);
-	countDownDate.setSeconds(30);
+else if(countDownDate.getDay()==6 && countDownDate.getHours()==15){
+	countDownDate.setHours(15);
+	countDownDate.setMinutes(06);
+	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
 var x = setInterval(function() {
