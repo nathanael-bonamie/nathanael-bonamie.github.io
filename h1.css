@@ -1,16 +1,17 @@
 body {
-  background: url("https://nathanael-bonamie.github.io/img.jpg");
+  background: url("https://nathanael-bonamie.github.io/img2.jpg");
   background-attachment:fixed;
   background-position:center;
   background-repeat:no-repeat;
   background-size: contain;
 }
 p {
-    font-size: 8.2vw;
-	font-size: 8.2vh;
-	color:#0f0;
+    font-size: 6.8vw;
+	font-size: 6.8vh;
+	color:#F00;
 	font-weight: bold;
 	text-align:center;
 	font-family:calibri;
-	margin-top:2.6em;
+	margin-top:2.5em;
+	margin-right:1.7em;
 }
