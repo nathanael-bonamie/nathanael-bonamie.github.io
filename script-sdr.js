@@ -14,9 +14,9 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
-else if(countDownDate.getDay()==6 && countDownDate.getHours()==19){
-	countDownDate.setHours(19);
-	countDownDate.setMinutes(49);
+else if(countDownDate.getDay()==6 && countDownDate.getHours()>19){
+	countDownDate.setHours(20);
+	countDownDate.setMinutes(00);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
@@ -32,17 +32,20 @@ var x = setInterval(function() {
   
   //document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + " mn " + seconds + " s ";
     
-  if (distance <= 5000) {//fermeture à 5 sec
+  /*if (distance <= 5000) {//fermeture à 5 sec
     var customWindow = window.open('', '_blank', '');
     customWindow.close(); 
-  }
-  else if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
-	audio.pause();
+  }*/
+  if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
+	//audio.pause();
 	var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
 	bip.play();
   }
   else if (distance <= 60000 && seconds == 20) {//fadeout à 15 sec
-	fadeOutEffect();
+	var y = setInterval(function () {
+		var audio = document.getElementById("cntq");
+		audio.volume -= 0.01;
+    		}, 150);
   }
   else if (distance <= 115000 && sessionStorage.getItem("play")=='no'){//cantique à 1m50s
 	audio.volume = 0.5;
@@ -50,10 +53,10 @@ var x = setInterval(function() {
 	sessionStorage.setItem("play","yes");
   }
 }, 1000);
-
-function fadeOutEffect() {
-    setInterval(function () {
-		var audio = document.getElementById("cntq");
-		audio.volume -= 0.01;
-    }, 150);
-	}
+  if (audio.volume < 0.1){
+  	clearInterval(y);
+	audio.pause();
+  }
+  if (distance < 0){
+  	clearInterval(x);
+  }
