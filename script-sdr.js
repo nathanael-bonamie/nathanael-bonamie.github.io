@@ -33,7 +33,7 @@ var x = setInterval(function() {
   //document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + " mn " + seconds + " s ";
     
   if (distance <= 5000) {//fermeture à 5 sec
-    open(location, '_self').close(); 
+    window.close(); 
   }
   else if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
 	audio.pause();
