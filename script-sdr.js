@@ -1,6 +1,4 @@
 sessionStorage.setItem("play","no");
-var audio = document.getElementById("cntq");
-var bip = document.getElementById("bip");
 var countDownDate = new Date();
 
 if (countDownDate.getDay()==2 && countDownDate.getHours()==19){//mardi soir 19h30
@@ -21,7 +19,8 @@ else {
 	countDownDate.setSeconds(countDownDate.getSeconds()+30);
 }
 var x = setInterval(function() {
-  //var audio = document.getElementById("cntq");
+var audio = document.getElementById("cntq");
+var bip = document.getElementById("bip");
   var now = new Date().getTime();
   var distance = countDownDate - now;
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
