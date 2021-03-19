@@ -31,6 +31,7 @@ var x = setInterval(function() {
   
   if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
 	var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
+	bip.volume=0.5;
 	bip.play();
   }
   else if (distance <= 60000 && seconds == 20) {//fadeout à 20 sec
@@ -40,6 +41,7 @@ var x = setInterval(function() {
     		}, 150);
   }
   else if (distance <= 115000 && sessionStorage.getItem("play")=='no'){//cantique à 1m55
+	audio.volume=0.5;
 	audio.play();
 	sessionStorage.setItem("play","yes");
   }
