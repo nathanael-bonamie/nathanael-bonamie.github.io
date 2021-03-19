@@ -30,8 +30,8 @@ var bip = document.getElementById("bip");
                    : document.getElementById("message").innerHTML = "La r&eacuteunion commence dans " + minutes + " mn " + seconds + " s");
   
   if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
-	bip.volume=0.4;
 	bip.play();
+	bip.volume=0.4;
   }
   else if (distance <= 60000 && seconds == 20) {//fadeout à 20 sec
 	var y = setInterval(function () {
@@ -40,8 +40,8 @@ var bip = document.getElementById("bip");
     		}, 150);
   }
   else if (distance <= 115000 && sessionStorage.getItem("play")=='no'){//cantique à 1m55
-	audio.volume=0.4;
 	audio.play();
+	audio.volume=0.4;
 	sessionStorage.setItem("play","yes");
   }
   else if (minutes == 0 && seconds == 0){//arret du décompte
