@@ -14,11 +14,10 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){//samedi aprÃ
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
-else if(countDownDate.getDay()==6 && countDownDate.getHours()>19){
-	countDownDate.setHours(20);
-	countDownDate.setMinutes(14);
-	countDownDate.setSeconds(00);
-	countDownDate=countDownDate.getTime();
+else (){
+	countDownDate.setHours(countDownDate.getHours());
+        countDownDate.setMinutes(countDownDate.getMinutes()+2);
+	countDownDate.setSeconds(countDownDate.getSeconds()+30);
 }
 var x = setInterval(function() {
   var audio = document.getElementById("cntq");
@@ -41,7 +40,6 @@ var x = setInterval(function() {
     		}, 150);
   }
   else if (distance <= 115000 && sessionStorage.getItem("play")=='no'){//cantique Ã  1m55
-	audio.volume = 0.5;
 	audio.play();
 	sessionStorage.setItem("play","yes");
   }
