@@ -14,7 +14,7 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){//samedi apr√
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 }
-else (){
+else {
 	countDownDate.setHours(countDownDate.getHours());
         countDownDate.setMinutes(countDownDate.getMinutes()+2);
 	countDownDate.setSeconds(countDownDate.getSeconds()+30);
