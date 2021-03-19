@@ -21,6 +21,7 @@ else {
 }
 var x = setInterval(function() {
   var audio = document.getElementById("cntq");
+  var bip = document.getElementById("bip");
   var now = new Date().getTime();
   var distance = countDownDate - now;
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -30,13 +31,12 @@ var x = setInterval(function() {
                    : document.getElementById("message").innerHTML = "La r&eacuteunion commence dans " + minutes + " mn " + seconds + " s");
   
   if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
-	var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
 	bip.volume=0.5;
 	bip.play();
   }
   else if (distance <= 60000 && seconds == 20) {//fadeout à 20 sec
 	var y = setInterval(function () {
-		var audio = document.getElementById("cntq");
+		//var audio = document.getElementById("cntq");
 		audio.volume -= 0.01;
     		}, 150);
   }
