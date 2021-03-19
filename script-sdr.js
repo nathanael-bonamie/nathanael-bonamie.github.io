@@ -1,4 +1,5 @@
 sessionStorage.setItem("play","no");
+document.getElementById("message").focus();
 var countDownDate = new Date();
 
 if (countDownDate.getDay()==2 && countDownDate.getHours()==19){//mardi soir 19h30
