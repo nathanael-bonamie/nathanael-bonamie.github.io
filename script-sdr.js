@@ -31,7 +31,7 @@ var x = setInterval(function() {
                    : document.getElementById("message").innerHTML = "La r&eacuteunion commence dans " + minutes + " mn " + seconds + " s");
   
   if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
-	bip.volume=0.5;
+	bip.volume=0.4;
 	bip.play();
   }
   else if (distance <= 60000 && seconds == 20) {//fadeout à 20 sec
@@ -41,14 +41,14 @@ var x = setInterval(function() {
     		}, 150);
   }
   else if (distance <= 115000 && sessionStorage.getItem("play")=='no'){//cantique à 1m55
-	audio.volume=0.5;
+	audio.volume=0.4;
 	audio.play();
 	sessionStorage.setItem("play","yes");
   }
   else if (minutes == 0 && seconds == 0){//arret du décompte
   	clearInterval(x);
   }
-  else if (audio.volume < 0.03){//arret fadeOut et pause audio
+  else if (audio.volume < 0.01){//arret fadeOut et pause audio
   	clearInterval(y);
 	audio.pause();
   	}
