@@ -52,6 +52,3 @@ var bip = document.getElementById("bip");
 	audio.pause();
   	}
 }, 1000);
-function loadSrc(){
-	alert(localStorage.getItem("cntq"));
-}
