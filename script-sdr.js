@@ -1,6 +1,8 @@
 sessionStorage.setItem("play","no");
 var countDownDate = new Date();
-var audio = new Audio(localStorage.getItem('cntq'));
+if (localStorage.cntq){
+	var audio = new Audio(localStorage.getItem('cntq'));
+}
 var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
 var regVol=0.3;
 
@@ -34,7 +36,7 @@ var x = setInterval(function() {
 	bip.volume=0.3;
 	bip.play();
   }
-  else if (distance <= 60000 && seconds == 20) {//fadeout à 20 sec
+  if (distance <= 60000 && seconds == 20 && localStorage.cntq) {//fadeout à 20 sec
 	var y = setInterval(function () {
 		if(regVol>0.01){
 			regVol-=0.01;
@@ -48,7 +50,7 @@ var x = setInterval(function() {
 			}
     		}, 300);
   }
-  if (distance <= 115000 && sessionStorage.getItem("play")=='no'){//cantique à 1m55
+  if (distance <= 115000 && sessionStorage.getItem("play")=='no' && localStorage.cntq){//cantique à 1m55
 	audio.volume=0.3;
 	audio.play();
 	sessionStorage.setItem("play","yes");
