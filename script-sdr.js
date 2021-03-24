@@ -1,5 +1,7 @@
 sessionStorage.setItem("play","no");
 var countDownDate = new Date();
+var audio = new Audio(localStorage.getItem('cntq'));
+var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
 
 if (countDownDate.getDay()==2 && countDownDate.getHours()==19){//mardi soir 19h30
 	countDownDate.setHours(19);
@@ -19,8 +21,6 @@ else {
 	countDownDate.setSeconds(countDownDate.getSeconds()+10);
 }
 var x = setInterval(function() {
-var audio = new Audio(localStorage.getItem('cntq'));
-var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
   var now = new Date().getTime();
   var distance = countDownDate - now;
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -36,6 +36,8 @@ var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
   else if (distance <= 60000 && seconds == 20) {//fadeout à 20 sec
 	var y = setInterval(function () {
 		audio.volume -= 0.01;
+		console.log('passage');
+		console.log(audio.volume);
     		}, 150);
   }
   else if (distance <= 115000 && sessionStorage.getItem("play")=='no'){//cantique à 1m55
