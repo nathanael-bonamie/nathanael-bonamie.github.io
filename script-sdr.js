@@ -34,6 +34,7 @@ var x = setInterval(function() {
 	bip.volume=0.3;
   }
   else if (distance <= 60000 && seconds == 20) {//fadeout à 20 sec
+		console.log('passage');
 	var y = setInterval(function () {
 		audio.volume -= 0.01;
 		console.log('passage');
