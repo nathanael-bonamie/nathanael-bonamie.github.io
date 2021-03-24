@@ -34,12 +34,10 @@ var x = setInterval(function() {
 	bip.volume=0.3;
   }
   else if (distance <= 60000 && seconds == 20) {//fadeout à 20 sec
-		console.log('passage');
 	var y = setInterval(function () {
-		audio.volume -= 0.01;
-		console.log('passage');
+		audio.volume -= 0.01.toFixed(2);
 		console.log(audio.volume);
-    		}, 150);
+    		}, 250);
   }
   else if (distance <= 115000 && sessionStorage.getItem("play")=='no'){//cantique à 1m55
 	audio.play();
