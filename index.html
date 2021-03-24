@@ -326,10 +326,18 @@
 	<canvas id="myCanvas150" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
 	<canvas id="myCanvas151" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
      </div>
+     <div class="modal-footer">
+        <button type="button" id="skip" class="btn btn-primary">Skip</button>
+      </div>
     </div>
    </div>
   </div>
 <script>
+	$('#skip').on('click', function() {
+		$('#monModal').modal('hide');
+		window.open("https://nathanael-bonamie.github.io/view.html" , "_self");
+	});
+	
 	function how(int){
 		var str=int.id;
 		var s=str.substr(str.indexOf('s')+1);
