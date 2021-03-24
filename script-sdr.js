@@ -31,10 +31,7 @@ var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
   
   if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
 	bip.play();
-	bip.volume=0.4;
-  }
-  else if (distance <= 60000 && seconds == 5) {//close à 5 sec
-	window.close();
+	bip.volume=0.3;
   }
   else if (distance <= 60000 && seconds == 20) {//fadeout à 20 sec
 	var y = setInterval(function () {
@@ -43,7 +40,7 @@ var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
   }
   else if (distance <= 115000 && sessionStorage.getItem("play")=='no'){//cantique à 1m55
 	audio.play();
-	audio.volume=0.4;
+	audio.volume=0.3;
 	sessionStorage.setItem("play","yes");
   }
   else if (minutes == 0 && seconds == 0){//arret du décompte
