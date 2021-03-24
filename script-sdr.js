@@ -44,6 +44,7 @@ var x = setInterval(function() {
 		else{
 			clearInterval(y);
 			audio.pause();
+			localStorage.clear();
 			}
     		}, 300);
   }
