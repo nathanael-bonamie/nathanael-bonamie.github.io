@@ -20,7 +20,7 @@ else {
 }
 var x = setInterval(function() {
 var audio = new Audio(localStorage.getItem('cntq'));
-var bip = document.getElementById("bip");
+var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
   var now = new Date().getTime();
   var distance = countDownDate - now;
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
