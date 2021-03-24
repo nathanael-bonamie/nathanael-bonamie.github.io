@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Selection du prélude</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -175,7 +175,7 @@
 			<li><data id="150" value="https://download-a.akamaihd.net/files/media_publication/9b/sjjm_F_150.mp3">Cantique n°150</data></li>
 			<li><data id="151" value="https://download-a.akamaihd.net/files/media_publication/aa/sjjm_F_151.mp3">Cantique n°151</data></li>
 		</ul>
-        <canvas id="myCanvas1" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
+        	<canvas id="myCanvas1" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
 		<canvas id="myCanvas2" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
 		<canvas id="myCanvas3" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
 		<canvas id="myCanvas4" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
@@ -326,71 +326,71 @@
 		<canvas id="myCanvas149" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
 		<canvas id="myCanvas150" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
 		<canvas id="myCanvas151" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
-      </div>
+     </div>
     </div>
-	</div>
+   </div>
   </div>
-		<script>
-			function how(int){
-				var str=int.id;
-				var s=str.substr(str.indexOf('s')+1);
-				localStorage.setItem("cntq",(document.getElementById(s).value));
-				$('#monModal').modal('hide');
-				window.open("https://nathanael-bonamie.github.io/" , "_self");
-			}
-			var ctx = new Array();
-			var canvas = new Array();
-			var nom = new Array();
-			for(var j=0;j<151;j++){
-				nom[j]="myCanvas"+(j+1);
-			}
+<script>
+	function how(int){
+		var str=int.id;
+		var s=str.substr(str.indexOf('s')+1);
+		localStorage.setItem("cntq",(document.getElementById(s).value));
+		$('#monModal').modal('hide');
+		window.open("https://nathanael-bonamie.github.io/" , "_self");
+	}
+	var ctx = new Array();
+	var canvas = new Array();
+	var nom = new Array();
+	for(var j=0;j<151;j++){
+		nom[j]="myCanvas"+(j+1);
+	}
 
-			var t=0;
-			for(var k=0;k<8;k++){
-				for(var i=0;k<7? i<20 : i<11;i++){
-									
-						canvas[t] = document.getElementById(nom[t]);
-						ctx[t] = canvas[t].getContext("2d");
-						ctx[t].lineWidth = 0;
-						roundRect(ctx[t], 1, 1, 42, 42, 0, false);
-						ctx[t].font="22px Roboto";
-						ctx[t].textAlign="center"; 
-						ctx[t].textBaseline = "middle";
-						var rectHeight = 42;
-						var rectWidth = 42;
-						ctx[t].fillText(t+1,1+(rectWidth/2),1+(rectHeight/2));
-						t+=1;
-				}
-				i=0;
-			}
-			function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
-			  if (typeof stroke == "undefined" ) {
-				stroke = true;
-			  }
-			  if (typeof radius === "undefined") {
-				radius = 5;
-			  }
-			  ctx.beginPath();
-			  ctx.moveTo(x + radius, y);
-			  ctx.lineTo(x + width - radius, y);
-			  ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
-			  ctx.lineTo(x + width, y + height - radius);
-			  ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
-			  ctx.lineTo(x + radius, y + height);
-			  ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
-			  ctx.lineTo(x, y + radius);
-			  ctx.quadraticCurveTo(x, y, x + radius, y);
-			  ctx.closePath();
-			  if (stroke) {
-				ctx.stroke();
-			  }
-			  if (fill) {
-				ctx.fill();
-			  }        
-			}
-			function ouvrir(){
-				$('#monModal').modal({ show: true });
-			}
-		</script>
+	var t=0;
+	for(var k=0;k<8;k++){
+		for(var i=0;k<7? i<20 : i<11;i++){
+
+				canvas[t] = document.getElementById(nom[t]);
+				ctx[t] = canvas[t].getContext("2d");
+				ctx[t].lineWidth = 0;
+				roundRect(ctx[t], 1, 1, 42, 42, 0, false);
+				ctx[t].font="22px Roboto";
+				ctx[t].textAlign="center"; 
+				ctx[t].textBaseline = "middle";
+				var rectHeight = 42;
+				var rectWidth = 42;
+				ctx[t].fillText(t+1,1+(rectWidth/2),1+(rectHeight/2));
+				t+=1;
+		}
+		i=0;
+	}
+	function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
+	  if (typeof stroke == "undefined" ) {
+		stroke = true;
+	  }
+	  if (typeof radius === "undefined") {
+		radius = 5;
+	  }
+	  ctx.beginPath();
+	  ctx.moveTo(x + radius, y);
+	  ctx.lineTo(x + width - radius, y);
+	  ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+	  ctx.lineTo(x + width, y + height - radius);
+	  ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+	  ctx.lineTo(x + radius, y + height);
+	  ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+	  ctx.lineTo(x, y + radius);
+	  ctx.quadraticCurveTo(x, y, x + radius, y);
+	  ctx.closePath();
+	  if (stroke) {
+		ctx.stroke();
+	  }
+	  if (fill) {
+		ctx.fill();
+	  }        
+	}
+	function ouvrir(){
+		$('#monModal').modal({ show: true });
+	}
+</script>
 </body>
 </html>
