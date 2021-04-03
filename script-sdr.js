@@ -12,8 +12,8 @@ if (countDownDate.getDay()==2 && countDownDate.getHours()==19){//mardi soir 19h3
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 	}
-else if(countDownDate.getDay()==6 && countDownDate.getHours()==19){//samedi aprèm 16h30
-	countDownDate.setHours(19);
+else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){//samedi aprèm 16h30
+	countDownDate.setHours(16);
 	countDownDate.setMinutes(30);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
@@ -33,7 +33,7 @@ var x = setInterval(function() {
                    : document.getElementById("message").innerHTML = "La r&eacuteunion commence dans " + minutes + " mn " + seconds + " s");
   
   if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
-	bip.volume=0.3;
+	bip.volume=0.2;
 	bip.play();
   }
   if (distance <= 60000 && seconds == 20 && localStorage.cntq) {//fadeout à 20 sec
