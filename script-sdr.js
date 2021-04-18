@@ -3,8 +3,8 @@ var countDownDate = new Date();
 if (localStorage.cntq){
 	var audio = new Audio(localStorage.getItem('cntq'));
 }
-/*var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
-var regVol=0.3;*/
+//var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
+var regVol=0.3;
 
 if (countDownDate.getDay()==2 && countDownDate.getHours()==19){//mardi soir 19h30
 	countDownDate.setHours(19);
