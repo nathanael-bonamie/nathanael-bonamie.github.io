@@ -333,6 +333,9 @@
 <script>
 	$('#skip').on('click', function() {
 		$('#monModal').modal('hide');
+		if(localStorage.cntq){
+			localStorage.removeItem('cntq');
+		}
 		window.open("https://nathanael-bonamie.github.io/view.html" , "_self");
 	});
 	
