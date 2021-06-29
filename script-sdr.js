@@ -12,17 +12,23 @@ if (countDownDate.getDay()==2 && countDownDate.getHours()==19){//mardi soir 19h3
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 	}
+else if(countDownDate.getDay()==6 && countDownDate.getHours()==15){//samedi aprèm 15h30
+	countDownDate.setHours(15);
+	countDownDate.setMinutes(30);
+	countDownDate.setSeconds(00);
+	countDownDate=countDownDate.getTime();
+	}
 else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){//samedi aprèm 16h30
 	countDownDate.setHours(16);
 	countDownDate.setMinutes(30);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
-}
+	}
 else {
 	countDownDate.setHours(countDownDate.getHours());//pour essais
         countDownDate.setMinutes(countDownDate.getMinutes()+2);
 	countDownDate.setSeconds(countDownDate.getSeconds()+10);
-}
+	}
 var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownDate - now;
