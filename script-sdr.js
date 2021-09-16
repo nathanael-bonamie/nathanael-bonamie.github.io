@@ -63,7 +63,5 @@ var x = setInterval(function() {
   }
   if (minutes == 0 && seconds == 0){//arret du décompte
   	clearInterval(x);
-	window.open('','_self');
-	window.close();
   }
 }, 1000);
