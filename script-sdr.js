@@ -61,7 +61,7 @@ var x = setInterval(function() {
 	audio.play();
 	sessionStorage.setItem("play","yes");
   }
-  if (minutes == 0 && seconds == 0){//arret du décompte
+  if (minutes <= 0 && seconds <= 0){//arret du décompte
   	clearInterval(x);
   }
 }, 1000);
