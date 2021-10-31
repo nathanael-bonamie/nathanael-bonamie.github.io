@@ -6,7 +6,7 @@ if (localStorage.cntq){
 //var bip = new Audio('https://nathanael-bonamie.github.io/goes.ogg');
 var regVol=0.3;
 
-if (countDownDate.getDay()==2 && countDownDate.getHours()==19){//mardi soir 19h30
+if (countDownDate.getDay()==2 && countDownDate.getHours()==19 && countDownDate.getMinutes()<30){//mardi soir 19h30
 	countDownDate.setHours(19);
 	countDownDate.setMinutes(30);
 	countDownDate.setSeconds(00);
@@ -18,7 +18,7 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==15 && countDownDa
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 	}
-else if(countDownDate.getDay()==6 && countDownDate.getHours()==16){//samedi aprèm 16h30
+else if(countDownDate.getDay()==6 && countDownDate.getHours()==16 && countDownDate.getMinutes()<30){//samedi aprèm 16h30
 	countDownDate.setHours(16);
 	countDownDate.setMinutes(30);
 	countDownDate.setSeconds(00);
