@@ -24,6 +24,12 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16 && countDownDa
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 	}
+else if(countDownDate.getDay()==6 && countDownDate.getHours()==09 && countDownDate.getMinutes()<40){//samedi aprèm 16h30
+	countDownDate.setHours(09);
+	countDownDate.setMinutes(40);
+	countDownDate.setSeconds(00);
+	countDownDate=countDownDate.getTime();
+	}
 else {
 	countDownDate.setHours(countDownDate.getHours());//pour essais
         countDownDate.setMinutes(countDownDate.getMinutes()+2);
