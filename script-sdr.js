@@ -24,9 +24,9 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==16 && countDownDa
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 	}
-else if(countDownDate.getDay()==6 && countDownDate.getHours()==09 && countDownDate.getMinutes()<40){//samedi aprèm 16h30
-	countDownDate.setHours(09);
-	countDownDate.setMinutes(40);
+else if(countDownDate.getDay()==6 && countDownDate.getHours()==13 && countDownDate.getMinutes()<20){//samedi aprèm 16h30
+	countDownDate.setHours(13);
+	countDownDate.setMinutes(20);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 	}
@@ -41,8 +41,8 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
-  if (seconds < 10 ? document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + " mn 0" + seconds + " s" 
-                   : document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + " mn " + seconds + " s");//r&eacuteunion
+  if (seconds < 10 ? document.getElementById("message").innerHTML = "L'assemblée commence dans " + minutes + " mn 0" + seconds + " s" 
+                   : document.getElementById("message").innerHTML = "L'assemblée commence dans " + minutes + " mn " + seconds + " s");//r&eacuteunion
   
   /*if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
 	bip.volume=0.2;
