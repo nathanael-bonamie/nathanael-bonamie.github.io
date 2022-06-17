@@ -12,6 +12,12 @@ if (countDownDate.getDay()==2 && countDownDate.getHours()==19 && countDownDate.g
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 	}
+else if (countDownDate.getDay()==4 && countDownDate.getHours()==19 && countDownDate.getMinutes()<30){//jeudi soir 19h30
+	countDownDate.setHours(19);
+	countDownDate.setMinutes(30);
+	countDownDate.setSeconds(00);
+	countDownDate=countDownDate.getTime();
+	}
 else if(countDownDate.getDay()==6 && countDownDate.getHours()==15 && countDownDate.getMinutes()<30){//samedi aprèm 15h30
 	countDownDate.setHours(15);
 	countDownDate.setMinutes(30);
