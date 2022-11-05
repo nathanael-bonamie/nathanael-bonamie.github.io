@@ -47,8 +47,8 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
-  if (seconds < 10 ? document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + " mn 0" + seconds + " s" 
-                   : document.getElementById("message").innerHTML = "La réunion commence dans " + minutes + " mn " + seconds + " s");//r&eacuteunion
+  if (seconds < 10 ? document.getElementById("message").innerHTML = "L'assemblée commence dans " + minutes + " mn 0" + seconds + " s" 
+                   : document.getElementById("message").innerHTML = "L'assemblée commence dans " + minutes + " mn " + seconds + " s");//r&eacuteunion
   
   /*if (distance <= 60000 && seconds == 10) {//goes.ogg à 10 sec
 	bip.volume=0.2;
