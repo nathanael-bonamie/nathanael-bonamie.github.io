@@ -18,9 +18,9 @@ else if (countDownDate.getDay()==4 && countDownDate.getHours()==19 && countDownD
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 	}
-else if(countDownDate.getDay()==6 && countDownDate.getHours()==14 && countDownDate.getMinutes()>30) && countDownDate.getMinutes()<60){//samedi aprèm 15h
+else if(countDownDate.getDay()==6 && countDownDate.getHours()==15 && countDownDate.getMinutes()<30){//samedi aprèm 15h30
 	countDownDate.setHours(15);
-	countDownDate.setMinutes(00);
+	countDownDate.setMinutes(30);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 	}
