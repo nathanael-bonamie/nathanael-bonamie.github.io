@@ -1,6 +1,6 @@
 sessionStorage.setItem("play","no");
 
-alert("clique sur les roues dentées pour afficher l'horloge plein écran sur le deuxième ecran puis valide le popup");
+alert("Clique sur les roues dentées pour afficher l'horloge plein écran sur le deuxième ecran puis valide le popup.");
 
 var countDownDate = new Date();
 
