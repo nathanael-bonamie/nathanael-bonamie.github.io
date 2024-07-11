@@ -11,7 +11,8 @@
   <p id="message"></p>
 </body>
   <script>
-    document.getElementById("message").addEventListener("click", clickBody);
+    var btn = document.getElementById("message");
+    btn.addEventListener("click", clickBody);
     var secondPresentBtn = document.getElementById("secondPresentBtn");
     var secondPresUrl = "https://nathanael-bonamie.github.io/clock.html";
     var secondRequest = new PresentationRequest(secondPresUrl);
