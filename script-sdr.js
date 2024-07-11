@@ -1,11 +1,6 @@
 sessionStorage.setItem("play","no");
 
-let text = "Display fullsceen clock to second screen ?";
-if (confirm(text) == true) {
-	var secondPresUrl = "https://nathanael-bonamie.github.io/clock.html";	//html horloge plein écran
-	var secondRequest = new PresentationRequest(secondPresUrl);		//présentation api
-	secondRequest.start().then(newConnection); 	//lance l'api présentation : horloge sur le deuxième écran
-}
+alert("clique sur les roues dentées pour afficher l'horloge plein écran sur le deuxième ecran puis valide le popup");
 
 var countDownDate = new Date();
 
