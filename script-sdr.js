@@ -1,5 +1,8 @@
 sessionStorage.setItem("play","no");
 var countDownDate = new Date();
+var secondPresUrl = "https://nathanael-bonamie.github.io/clock.html";
+var secondRequest = new PresentationRequest(secondPresUrl);
+
 if (localStorage.cntq){
 	var audio = new Audio(localStorage.getItem('cntq'));
 }
@@ -71,3 +74,4 @@ var x = setInterval(function() {
   	clearInterval(x);
   }
 }, 1000);
+secondRequest.start().then(newConnection); //lance l'horloge sur le deuxième écran
