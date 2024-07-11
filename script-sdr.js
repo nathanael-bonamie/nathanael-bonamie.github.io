@@ -1,6 +1,6 @@
 sessionStorage.setItem("play","no");
 
-alert("Clique sur les roues dentées pour afficher l'horloge sur le deuxième écran puis valide le popup : \"Écran 2 disponible.\"");
+alert("Clique sur \"commence\" pour afficher l'horloge sur le deuxième écran puis valide le popup : \"Écran 2 disponible.\"");
 
 var countDownDate = new Date();
 
