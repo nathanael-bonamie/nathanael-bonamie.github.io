@@ -1,8 +1,13 @@
 sessionStorage.setItem("play","no");
+
+let text = "Display fullsceen clock to second screen";
+if (confirm(text) == true) {
+	var secondPresUrl = "https://nathanael-bonamie.github.io/clock.html";	//html horloge plein écran
+	var secondRequest = new PresentationRequest(secondPresUrl);		//présentation api
+	secondRequest.start().then(newConnection); 	//lance l'api présentation : horloge sur le deuxième écran
+}
+
 var countDownDate = new Date();
-var secondPresUrl = "https://nathanael-bonamie.github.io/clock.html";	//html horloge plein écran
-var secondRequest = new PresentationRequest(secondPresUrl);		//présentation api
-secondRequest.start().then(newConnection); 	//lance l'api présentation : horloge sur le deuxième écran
 
 if (localStorage.cntq){
 	var audio = new Audio(localStorage.getItem('cntq'));
