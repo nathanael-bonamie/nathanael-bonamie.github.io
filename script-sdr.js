@@ -1,7 +1,7 @@
 sessionStorage.setItem("play","no");
 var countDownDate = new Date();
-var secondPresUrl = "https://nathanael-bonamie.github.io/clock.html";
-var secondRequest = new PresentationRequest(secondPresUrl);
+var secondPresUrl = "https://nathanael-bonamie.github.io/clock.html";	//html horloge plein écran
+var secondRequest = new PresentationRequest(secondPresUrl);		//présentation api
 
 if (localStorage.cntq){
 	var audio = new Audio(localStorage.getItem('cntq'));
@@ -74,4 +74,4 @@ var x = setInterval(function() {
   	clearInterval(x);
   }
 }, 1000);
-secondRequest.start().then(newConnection); //lance l'horloge sur le deuxième écran
+secondRequest.start().then(newConnection); 	//lance l'api présentation : horloge sur le deuxième écran
