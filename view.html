@@ -7,7 +7,16 @@
   <script src="https://nathanael-bonamie.github.io/script-sdr.js"></script>
   <link rel="stylesheet" href="https://nathanael-bonamie.github.io/h1.css"/>
 </head>
-<body onClick="theBody">
+<body>
   <p id="message"></p>
 </body>
+  <script>
+    document.body.addEventListener("click", clickBody);
+    var secondPresentBtn = document.getElementById("secondPresentBtn");
+    var secondPresUrl = "https://nathanael-bonamie.github.io/clock.html";
+    var secondRequest = new PresentationRequest(secondPresUrl);
+    function clickBody(){
+        secondRequest.start().then(newConnection);
+    }
+  </script>
 </html>
