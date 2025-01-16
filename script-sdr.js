@@ -35,8 +35,8 @@ else if(countDownDate.getDay()==6 && countDownDate.getHours()==15 && countDownDa
 	countDownDate=countDownDate.getTime();
 	}
 else if(countDownDate.getDay()==6 && countDownDate.getHours()==18 && countDownDate.getMinutes()<30){//samedi aprèm 18h30
-	countDownDate.setHours(16);
-	countDownDate.setMinutes(00);
+	countDownDate.setHours(18);
+	countDownDate.setMinutes(30);
 	countDownDate.setSeconds(00);
 	countDownDate=countDownDate.getTime();
 	}
