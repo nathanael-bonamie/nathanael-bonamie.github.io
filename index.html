@@ -180,6 +180,7 @@
 	<li><data id="158" value="https://cfp2.jw-cdn.org/a/0b5e95/2/o/sjjm_F_158.mp3">Cantique n°158</data></li>	
 	<li><data id="159" value="https://cfp2.jw-cdn.org/a/f94bed5/1/o/sjjm_F_159.mp3">Cantique n°159</data></li>
 	<li><data id="160" value="https://cfp2.jw-cdn.org/a/361ff9f/1/o/sjjm_F_160.mp3">Cantique n°160</data></li>
+	<li><data id="161" value="https://cfp2.jw-cdn.org/a/aea030/1/o/sjjm_F_161.mp3">Cantique n°161</data></li>
 	</ul>
 	<canvas id="myCanvas1" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
 	<canvas id="myCanvas2" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
@@ -341,6 +342,7 @@
 	<canvas id="myCanvas158" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
 	<canvas id="myCanvas159" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
 	<canvas id="myCanvas160" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
+	<canvas id="myCanvas161" width="44px" height="44px" style="background:#e6e6e6" onmouseover="this.style.background='#ccc'" onmouseout="this.style.background='#e6e6e6'" onmousedown="how(this);"></canvas>
 	</div>
      <div class="modal-footer">
         <button type="button" id="skip" class="btn btn-primary">Skip</button>
@@ -367,13 +369,13 @@
 	var ctx = new Array();
 	var canvas = new Array();
 	var nom = new Array();
-	for(var j=0;j<160;j++){//ajouter 1 pour un cantique de plus
+	for(var j=0;j<161;j++){//ajouter 1 pour un cantique de plus
 		nom[j]="myCanvas"+(j+1);
 	}
 
 	var t=0;
 	for(var k=0;k<8;k++){
-		for(var i=0;k<7? i<21 : i<13;i++){//ajouter 1 à 13 pour un cantique de plus
+		for(var i=0;k<7? i<21 : i<14;i++){//ajouter 1 à 14 pour un cantique de plus
 
 				canvas[t] = document.getElementById(nom[t]);
 				ctx[t] = canvas[t].getContext("2d");
